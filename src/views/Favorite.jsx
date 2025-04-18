@@ -1,6 +1,6 @@
 import React from 'react';
 import useFavorite from '../hooks/useFavorite';
-import CountryCard from '../components/CountryCard';
+import CountryList from '../components/CountryList';
 import { Link } from 'react-router-dom';
 
 const Favorite = () => {
@@ -18,11 +18,10 @@ const Favorite = () => {
           </Link>
         </div>
       ) : (
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
-          {favorites.map((country) => (
-            <CountryCard key={country.cca3} country={country} />
-          ))}
-        </div>
+        <CountryList 
+          countries={favorites} 
+          emptyMessage="You haven't added any countries to your favorites yet."
+        />
       )}
     </div>
   );

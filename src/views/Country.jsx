@@ -2,6 +2,8 @@ import React from 'react';
 import { useParams, Link } from 'react-router-dom';
 import useFetchCountry from '../hooks/useFetchCountry';
 import Loading from '../components/Loading';
+import Button from '../components/Button';
+
 const Country = () => {
   const { countryName } = useParams();
   const { country, isLoading, isError } = useFetchCountry(countryName);
@@ -94,14 +96,9 @@ const Country = () => {
           
           {country.maps && country.maps.googleMaps && (
             <div className="mt-6">
-              <a 
-                href={country.maps.googleMaps} 
-                target="_blank" 
-                rel="noopener noreferrer"
-                className="inline-block bg-blue-600 text-white px-4 py-2 rounded-md hover:bg-blue-700 transition-colors"
-              >
+              <Button onClick={() => window.open(country.maps.googleMaps, '_blank', 'noopener,noreferrer')}>
                 View on Google Maps
-              </a>
+              </Button>
             </div>
           )}
         </div>

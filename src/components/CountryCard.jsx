@@ -53,10 +53,10 @@ const CountryCard = ({ country }) => {
           <h2 className="text-xl font-bold text-gray-800 mb-2">{name}</h2>
           <div className="space-y-2">
             <p className="text-gray-600">
-              <span className="font-medium">Country Code:</span> {countryCode}
+              <span className="font-medium"><b>Country Code:</b></span> {countryCode}
             </p>
             <p className="text-gray-600">
-              <span className="font-medium">Currency:</span> {currencies}
+              <span className="font-medium"><b>Currency:</b></span> {currencies}
             </p>
           </div>
         </div>
