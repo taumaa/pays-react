@@ -29,7 +29,7 @@ const CountryCard = ({ country }) => {
       <div className="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow duration-300 relative">
         <button
           onClick={handleFavoriteClick}
-          className="absolute top-2 right-2 z-10 bg-white bg-opacity-70 p-2 rounded-full hover:bg-opacity-100 transition-all"
+          className="absolute cursor-pointer top-2 right-2 z-10 bg-white bg-opacity-70 p-2 rounded-full hover:bg-opacity-100 transition-all"
           aria-label={isCountryFavorite ? "Remove from favorites" : "Add to favorites"}
         >
           {isCountryFavorite ? (

@@ -37,7 +37,7 @@ const SearchBar = () => {
     <div className="relative">
       <button 
         onClick={toggleModal} 
-        className="focus:outline-none text-blue-500 hover:text-blue-600"
+        className="focus:outline-none cursor-pointer text-blue-500 hover:text-blue-600"
         aria-label="Search"
       >
         <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
